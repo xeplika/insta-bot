@@ -1,10 +1,11 @@
+# filepath: [test.py](http://_vscodecontentref_/1)
 import os
 import yt_dlp
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ChatAction
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 
-TOKEN = "8056536102:AAEehheVhpSuOemmaZg0WHild1yDdpyY-yc"
+TOKEN = os.getenv("TOKEN")  # Railway-də TOKEN environment dəyişəni kimi saxlanılır
 
 LANGUAGES = {
     "az": {"name": "Azərbaycan 🇦🇿", "welcome": "Salam! Instagram linki göndərin, video və ya şəkil yükləyim.", "loading": "🔄 Yüklənir..."},
